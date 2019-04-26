@@ -2298,8 +2298,8 @@ h2 .yellow {
 
 .callback_sect .left {
     width: calc(100% - 440px);
-    padding: 20px 0 112px 0;
-    /*text-align: right;*/
+    padding: 20px 8% 112px 0;
+    text-align: right;
 }
 
 .callback_sect .right {
@@ -2312,7 +2312,7 @@ h2 .yellow {
     position: relative;
     padding-top: 200px;
     padding-left: 24px;
-    /*text-align: left;*/
+    text-align: left;
 }
 
 .phone {
