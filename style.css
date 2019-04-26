@@ -2298,6 +2298,7 @@ h2 .yellow {
 
 .callback_sect .left {
     width: calc(100% - 440px);
+    padding: 20px 0 112px 0;
     /*text-align: right;*/
 }
 
