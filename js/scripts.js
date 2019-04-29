@@ -1,9 +1,17 @@
-function getSlideParams() {
+function getSliderParams() {
 	$(".promo_slider .slide").each(function() {
     	slideHeight = $(".promo_sect").outerHeight();
     	$(this).css({
     		"height" : slideHeight + "px"
     	});
+    });
+}
+
+function getSlySliderParams(bodyWidth) {
+    var slySliderWidth = bodyWidth - $(".sly_position_coords").offset().left;
+    $(".sly_block_wrapp").css({
+        "width" : slySliderWidth + "px",
+        "padding-left" : $(".sly_position_coords").offset().left + "px"
     });
 }
 
@@ -25,7 +33,9 @@ $(window).on("load", function (e) {
 
 $(window).resize(function() {
 
-	getSlideParams();
+    bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
+	getSliderParams();
+    getSlySliderParams();
 
 });
 
@@ -37,7 +47,9 @@ $(document).scroll(function() {
 
 $(document).ready(function() {
 
-	getSlideParams();
+	getSliderParams();
+    getSlySliderParams();
+    
 
 	// new fullpage('#fullpage', {
 	// 	//options here,
@@ -198,6 +210,7 @@ $(document).ready(function() {
     $(".callback_slider").not(".slick-initialized").slick({
         dots: false,
         arrows: true,
+        // infinite: false,
         // autoplay: true,
         autoplaySpeed: 4000,
         speed: 1200,
@@ -208,6 +221,27 @@ $(document).ready(function() {
         nextArrow: '<button class="slick-next" aria-label="Next" type="button"></button>'
     });
 
+    $("#callback_slider_btn").on("click", function(e) {
+        e.preventDefault();
+        $(".callback_slider .slick-next").trigger("click");
+    });
+
+    $(".articles_slider").not(".slick-initialized").slick({
+        dots: false,
+        arrows: true,
+        // autoplay: true,
+        autoplaySpeed: 4000,
+        speed: 1200,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        prevArrow: '<button class="slick-prev" aria-label="Previous" type="button"></button>',
+        nextArrow: '<button class="slick-next" aria-label="Next" type="button"></button>'
+    });
+
+    $("#articles_slider_btn").on("click", function(e) {
+        e.preventDefault();
+        $(".articles_slider .slick-next").trigger("click");
+    });
 
     // $(".scroll_down").click(function(e) {
     //     e.preventDefault();
@@ -259,6 +293,13 @@ for(let i = 0; i < moo.length; i++){
     }
   });
 }
+
+    $(".submit_btn").on("click", function(e) {
+        e.preventDefault();
+        parentBLock = $(this).closest("form");
+        var submitEl = parentBLock.find(".submit_input");
+        submitEl.trigger("click");
+    });
     
 
 });

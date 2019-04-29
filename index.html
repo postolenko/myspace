@@ -8,9 +8,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<link rel="stylesheet" type="text/css" href="style.css">
-<!-- 	<script src="https://api-maps.yandex.ru/2.0-stable/?apikey=<ваш API-ключ>&?apikey=<ваш API-ключ>&load=package.standard&lang=ru-RU" type="text/javascript"> </script> -->
 	<title>MY Space - пространство для жизни</title>
-<!-- 	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </head>
 
 <body>
@@ -19,10 +18,10 @@
 
 	<!-- Header -->
 		
-	<header>
+<!-- 	<header>
 
 		<div class="header_site">
-			<!-- <div class="row clearfix">
+			<div class="row clearfix">
 				<div class="left">
 					<div class="main_nav_wrapp" id="resp_nav">
 						<ul class="main-nav">
@@ -47,12 +46,50 @@
 						<span></span>
 					</button>
 				</div>
-			</div> -->
+			</div>
 		</div>
 								
-	</header>
+	</header> -->
 
 	<!-- /Header -->
+
+	<!-- Fixed Header -->
+
+<!-- 	<div class="fixed_header">
+		<div class="row clearfix">
+			<div class="left">
+				<div class="inline_block">
+					<a href="#" class="logo">
+						<h2><span class="ms">MS</span><span class="yellow">development</span></h2>
+					</a>
+				</div>
+				<div class="inline_block">
+					<ul class="main_nav_2">
+						<li><a href="#">выбрать объект </a></li>
+						<li><a href="#" class="active">выбор планировок</a></li>
+						<li><a href="#">почему мы</a></li>
+						<li><a href="#">этапы</a></li>
+						<li><a href="#">заявка</a></li>
+						<li><a href="#">о нас</a></li>
+						<li><a href="#">контакты</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="right">
+				<div class="input_title input_title_3">
+					<div class="col">
+						<i class="tel_black"></i>
+					</div>
+					<div class="col">
+						<div><a href="tel:+74991500111" class="tel_link tel_link_4">+7 499 150 01 11</a></div>
+						<p><a href="#" class="black_link">Заказать звонок</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> -->
+
+	<!-- /Fixed Header -->
 
 	<!-- Content -->
 		<div class="content">
@@ -141,45 +178,25 @@
 
 				<!-- Section 2 - Main Page -->
 				<section class="section section_2" id="choseObject">
-					<div class="row">
-						<div class="h2_wrapp">
-							<h2>Карта наших объектов</h2>
-						</div>
-						<div class="objects_map">
-							<!-- <script type="text/javascript">
-							    var myMap;
-							    ymaps.ready(function () {
-							        myMap = new ymaps.Map("YMapsID", {
-							            center: [55.76, 37.64],
-							            zoom: 10
-							        });
-									var myCollection = new ymaps.GeoObjectCollection();
-									myCollection.add(new ymaps.Placemark([37.61, 55.75]));
-									myCollection.add(new ymaps.Placemark([13.38, 52.51]));
-									myCollection.add(new ymaps.Placemark([30.30, 50.27]));
-									myCollection.events
-									    .add("mouseenter", function () {
-									        myCollection.options.set("preset", "twirl#redIcon");
-									    })
-									    .add("mouseleave", function () {
-									        myCollection.options.unset("preset");
-									    });
-									myMap.geoObjects.add(myCollection);
-									myMap.setBounds(myCollection.getBounds());
-							    });
-							    
-							</script>
-							<div id="YMapsID" style="width: 450px; height: 350px;"></div> -->
-						</div>
+					<div class="h2_wrapp">
+						<h2>Карта наших объектов</h2>
+					</div>
+					<div class="objects_map">
+						<div class="map_wrapp">
+							<div id="YMaps" class="yandex_map"></div>
+						</div>						
 					</div>
 				</section>
 				<!-- /Section 2 - Main Page -->
 
 				<!-- Section 3 - Main Page -->
 				<section class="section section_3">
-					<div class="city_objects_templ">
+					<div class="left_line">
+						<div class="row"></div>
+					</div>
+					<div class="city_objects_templ">						
 						<div class="row">
-							<!-- <aside class="left_links">
+							<aside class="left_links">
 								<div class="title">
 									<div class="logo">
 										<h2><span class="ms">MS</span><span class="yellow">development</span></h2>
@@ -209,10 +226,10 @@
 										</a>
 									</div>
 								</div>
-							</aside> -->
+							</aside>
 							<div class="city_objects_header">
 								<div class="col">
-									<h3>Выбери пространство</h3>
+									<h2>Выбери пространство</h2>
 								</div>
 								<div class="col">
 									<a href="#" class="link_2"><i class="city_mark"></i><span class="text">Посмотреть объекты на карте</span></a>
@@ -243,203 +260,206 @@
 								<div class="col">
 									<a href="#" class="yellow_pill"><i class="eye"></i><i class="eye_yelow"></i>перейти на сайт объекта</a>
 								</div>
+							</div>							
+						</div>
+						<div class="row sly_position_coords_wrapp">
+							<div class="sly_position_coords"></div>
+						</div>
+						<div class="sly_block_wrapp">
+							<div class="sly_block">
+								<div class="object_slider clearfix">
+									<div class="slide">
+										<a href="#" class="object_thumb">
+											<img src="img/img_01.jpg" alt="" />
+											<div class="mask">
+												<div class="descript">
+													<h3>38,4 <span class="msq">м<sup>2</sup></span></h3>
+													<div class="placename_wrapp">
+														<i class="place_2"></i>
+														<p>ул. Тухачевского, <span class="number">60</span></p>
+													</div>
+													<div class="inner_desc">
+														<p class="price_2">от <span class="price_val">3,85</span> млн. руб</p>
+														<div class="add_text">
+															<p>Может ещё какой-то текст, на пару строчек, с описанием, например.. </p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="slide">
+										<a href="#" class="object_thumb">
+											<img src="img/img_02.jpg" alt="" />
+											<div class="mask">
+												<div class="descript">
+													<h3>38,4 <span class="msq">м<sup>2</sup></span></h3>
+													<div class="placename_wrapp">
+														<i class="place_2"></i>
+														<p>ул. Тухачевского, <span class="number">60</span></p>
+													</div>
+													<div class="inner_desc">
+														<p class="price_2">от <span class="price_val">3,85</span> млн. руб</p>
+														<div class="add_text">
+															<p>Может ещё какой-то текст, на пару строчек, с описанием, например.. </p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="slide">
+										<a href="#" class="object_thumb">
+											<img src="img/img_02.jpg" alt="" />
+											<div class="mask">
+												<div class="descript">
+													<h3>38,4 <span class="msq">м<sup>2</sup></span></h3>
+													<div class="placename_wrapp">
+														<i class="place_2"></i>
+														<p>ул. Тухачевского, <span class="number">60</span></p>
+													</div>
+													<div class="inner_desc">
+														<p class="price_2">от <span class="price_val">3,85</span> млн. руб</p>
+														<div class="add_text">
+															<p>Может ещё какой-то текст, на пару строчек, с описанием, например.. </p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="slide">
+										<a href="#" class="object_thumb">
+											<img src="img/img_01.jpg" alt="" />
+											<div class="mask">
+												<div class="descript">
+													<h3>38,4 <span class="msq">м<sup>2</sup></span></h3>
+													<div class="placename_wrapp">
+														<i class="place_2"></i>
+														<p>ул. Тухачевского, <span class="number">60</span></p>
+													</div>
+													<div class="inner_desc">
+														<p class="price_2">от <span class="price_val">3,85</span> млн. руб</p>
+														<div class="add_text">
+															<p>Может ещё какой-то текст, на пару строчек, с описанием, например.. </p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="slide">
+										<a href="#" class="object_thumb">
+											<img src="img/img_02.jpg" alt="" />
+											<div class="mask">
+												<div class="descript">
+													<h3>38,4 <span class="msq">м<sup>2</sup></span></h3>
+													<div class="placename_wrapp">
+														<i class="place_2"></i>
+														<p>ул. Тухачевского, <span class="number">60</span></p>
+													</div>
+													<div class="inner_desc">
+														<p class="price_2">от <span class="price_val">3,85</span> млн. руб</p>
+														<div class="add_text">
+															<p>Может ещё какой-то текст, на пару строчек, с описанием, например.. </p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="slide">
+										<a href="#" class="object_thumb">
+											<img src="img/img_02.jpg" alt="" />
+											<div class="mask">
+												<div class="descript">
+													<h3>38,4 <span class="msq">м<sup>2</sup></span></h3>
+													<div class="placename_wrapp">
+														<i class="place_2"></i>
+														<p>ул. Тухачевского, <span class="number">60</span></p>
+													</div>
+													<div class="inner_desc">
+														<p class="price_2">от <span class="price_val">3,85</span> млн. руб</p>
+														<div class="add_text">
+															<p>Может ещё какой-то текст, на пару строчек, с описанием, например.. </p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="slide">
+										<a href="#" class="object_thumb">
+											<img src="img/img_01.jpg" alt="" />
+											<div class="mask">
+												<div class="descript">
+													<h3>38,4 <span class="msq">м<sup>2</sup></span></h3>
+													<div class="placename_wrapp">
+														<i class="place_2"></i>
+														<p>ул. Тухачевского, <span class="number">60</span></p>
+													</div>
+													<div class="inner_desc">
+														<p class="price_2">от <span class="price_val">3,85</span> млн. руб</p>
+														<div class="add_text">
+															<p>Может ещё какой-то текст, на пару строчек, с описанием, например.. </p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="slide">
+										<a href="#" class="object_thumb">
+											<img src="img/img_02.jpg" alt="" />
+											<div class="mask">
+												<div class="descript">
+													<h3>38,4 <span class="msq">м<sup>2</sup></span></h3>
+													<div class="placename_wrapp">
+														<i class="place_2"></i>
+														<p>ул. Тухачевского, <span class="number">60</span></p>
+													</div>
+													<div class="inner_desc">
+														<p class="price_2">от <span class="price_val">3,85</span> млн. руб</p>
+														<div class="add_text">
+															<p>Может ещё какой-то текст, на пару строчек, с описанием, например.. </p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+									<div class="slide">
+										<a href="#" class="object_thumb">
+											<img src="img/img_02.jpg" alt="" />
+											<div class="mask">
+												<div class="descript">
+													<h3>38,4 <span class="msq">м<sup>2</sup></span></h3>
+													<div class="placename_wrapp">
+														<i class="place_2"></i>
+														<p>ул. Тухачевского, <span class="number">60</span></p>
+													</div>
+													<div class="inner_desc">
+														<p class="price_2">от <span class="price_val">3,85</span> млн. руб</p>
+														<div class="add_text">
+															<p>Может ещё какой-то текст, на пару строчек, с описанием, например.. </p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
 							</div>
-							<div class="sly_block_wrapp">
-								<div class="sly_block">
-									<div class="object_slider clearfix">
-										<div class="slide">
-											<a href="#" class="object_thumb">
-												<img src="img/img_01.jpg" alt="" />
-												<div class="mask">
-													<div class="descript">
-														<h3>38,4 <span class="msq">м<sup>2</sup></span></h3>
-														<div class="placename_wrapp">
-															<i class="place_2"></i>
-															<p>ул. Тухачевского, <span class="number">60</span></p>
-														</div>
-														<div class="inner_desc">
-															<p class="price_2">от <span class="price_val">3,85</span> млн. руб</p>
-															<div class="add_text">
-																<p>Может ещё какой-то текст, на пару строчек, с описанием, например.. </p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="slide">
-											<a href="#" class="object_thumb">
-												<img src="img/img_02.jpg" alt="" />
-												<div class="mask">
-													<div class="descript">
-														<h3>38,4 <span class="msq">м<sup>2</sup></span></h3>
-														<div class="placename_wrapp">
-															<i class="place_2"></i>
-															<p>ул. Тухачевского, <span class="number">60</span></p>
-														</div>
-														<div class="inner_desc">
-															<p class="price_2">от <span class="price_val">3,85</span> млн. руб</p>
-															<div class="add_text">
-																<p>Может ещё какой-то текст, на пару строчек, с описанием, например.. </p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="slide">
-											<a href="#" class="object_thumb">
-												<img src="img/img_02.jpg" alt="" />
-												<div class="mask">
-													<div class="descript">
-														<h3>38,4 <span class="msq">м<sup>2</sup></span></h3>
-														<div class="placename_wrapp">
-															<i class="place_2"></i>
-															<p>ул. Тухачевского, <span class="number">60</span></p>
-														</div>
-														<div class="inner_desc">
-															<p class="price_2">от <span class="price_val">3,85</span> млн. руб</p>
-															<div class="add_text">
-																<p>Может ещё какой-то текст, на пару строчек, с описанием, например.. </p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="slide">
-											<a href="#" class="object_thumb">
-												<img src="img/img_01.jpg" alt="" />
-												<div class="mask">
-													<div class="descript">
-														<h3>38,4 <span class="msq">м<sup>2</sup></span></h3>
-														<div class="placename_wrapp">
-															<i class="place_2"></i>
-															<p>ул. Тухачевского, <span class="number">60</span></p>
-														</div>
-														<div class="inner_desc">
-															<p class="price_2">от <span class="price_val">3,85</span> млн. руб</p>
-															<div class="add_text">
-																<p>Может ещё какой-то текст, на пару строчек, с описанием, например.. </p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="slide">
-											<a href="#" class="object_thumb">
-												<img src="img/img_02.jpg" alt="" />
-												<div class="mask">
-													<div class="descript">
-														<h3>38,4 <span class="msq">м<sup>2</sup></span></h3>
-														<div class="placename_wrapp">
-															<i class="place_2"></i>
-															<p>ул. Тухачевского, <span class="number">60</span></p>
-														</div>
-														<div class="inner_desc">
-															<p class="price_2">от <span class="price_val">3,85</span> млн. руб</p>
-															<div class="add_text">
-																<p>Может ещё какой-то текст, на пару строчек, с описанием, например.. </p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="slide">
-											<a href="#" class="object_thumb">
-												<img src="img/img_02.jpg" alt="" />
-												<div class="mask">
-													<div class="descript">
-														<h3>38,4 <span class="msq">м<sup>2</sup></span></h3>
-														<div class="placename_wrapp">
-															<i class="place_2"></i>
-															<p>ул. Тухачевского, <span class="number">60</span></p>
-														</div>
-														<div class="inner_desc">
-															<p class="price_2">от <span class="price_val">3,85</span> млн. руб</p>
-															<div class="add_text">
-																<p>Может ещё какой-то текст, на пару строчек, с описанием, например.. </p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="slide">
-											<a href="#" class="object_thumb">
-												<img src="img/img_01.jpg" alt="" />
-												<div class="mask">
-													<div class="descript">
-														<h3>38,4 <span class="msq">м<sup>2</sup></span></h3>
-														<div class="placename_wrapp">
-															<i class="place_2"></i>
-															<p>ул. Тухачевского, <span class="number">60</span></p>
-														</div>
-														<div class="inner_desc">
-															<p class="price_2">от <span class="price_val">3,85</span> млн. руб</p>
-															<div class="add_text">
-																<p>Может ещё какой-то текст, на пару строчек, с описанием, например.. </p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="slide">
-											<a href="#" class="object_thumb">
-												<img src="img/img_02.jpg" alt="" />
-												<div class="mask">
-													<div class="descript">
-														<h3>38,4 <span class="msq">м<sup>2</sup></span></h3>
-														<div class="placename_wrapp">
-															<i class="place_2"></i>
-															<p>ул. Тухачевского, <span class="number">60</span></p>
-														</div>
-														<div class="inner_desc">
-															<p class="price_2">от <span class="price_val">3,85</span> млн. руб</p>
-															<div class="add_text">
-																<p>Может ещё какой-то текст, на пару строчек, с описанием, например.. </p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</a>
-										</div>
-										<div class="slide">
-											<a href="#" class="object_thumb">
-												<img src="img/img_02.jpg" alt="" />
-												<div class="mask">
-													<div class="descript">
-														<h3>38,4 <span class="msq">м<sup>2</sup></span></h3>
-														<div class="placename_wrapp">
-															<i class="place_2"></i>
-															<p>ул. Тухачевского, <span class="number">60</span></p>
-														</div>
-														<div class="inner_desc">
-															<p class="price_2">от <span class="price_val">3,85</span> млн. руб</p>
-															<div class="add_text">
-																<p>Может ещё какой-то текст, на пару строчек, с описанием, например.. </p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</a>
-										</div>
-									</div>
+							<div class="scrollbar">
+								<div class="handle"></div>
+							</div>
+							<div class="objects_slider_controls">
+								<button type="button" class="prev_sly"></button>
+								<div class="slides_numbers">
+									<p class="current_slider sly_current">2</p>
+									<p class="count_slides_2"><span class="count_slides_num">18</span></p>
 								</div>
-								<div class="scrollbar">
-									<div class="handle"></div>
-								</div>
-								<div class="objects_slider_controls">
-									<button type="button" class="prev_sly"></button>
-									<div class="slides_numbers">
-										<p class="current_slider sly_current">2</p>
-										<p class="count_slides_2"><span class="count_slides_num">18</span></p>
-									</div>
-									<button type="button" class="next_sly"></button>
-								</div>
+								<button type="button" class="next_sly"></button>
 							</div>
 						</div>
 					</div>					
@@ -448,10 +468,12 @@
 
 				<!-- Section 4 - Main Page -->
 				<section class="section section_4">
-					<div class="row">
-						<div class="h2_wrapp_2">
+					<div class="h2_wrapp_2">
+						<div class="row">
 							<h2>Почему мы</h2>
 						</div>
+					</div>
+					<div class="row">
 						<div class="thumbnails_1 offset_ziro">
 							<div class="thumb_1">
 								<div class="col_1">
@@ -471,13 +493,11 @@
 							</div>
 							<div class="thumb_1">
 								<div class="col_1">
-									<div class="num_box">
-										<p class="small_text">от</p>
+									<div class="num_box num_box_2">
+										<p class="text">от</p>
 										<div class="col">
 											<p class="num">6</p>
-										</div>
-										<div class="col">
-											<p class="percent">%</p>
+											<div class="percent">%</div>
 										</div>
 									</div>
 								</div>
@@ -548,7 +568,6 @@
 								<div class="callback_slider_wrapp">
 									<div class="phone">
 										<div class="phone_inner">
-											<!-- <img src="img/" alt="" /> -->
 											<h3>Название <span class="yellow">компании</span></h3>
 										</div>
 									</div>
@@ -570,7 +589,7 @@
 										</div>
 									</div>
 									<div class="callback_slider_controls">
-										<button type="button" class="yellow_circle"><i class="right_arrow"></i></button>
+										<button type="button" class="yellow_cr_btn" id="callback_slider_btn"></button>
 									</div>
 								</div>
 							</div>
@@ -578,7 +597,7 @@
 								<div class="form_wrapp">
 									<h3>Оставить заявку</h3>
 									<p>Заполните форму, чтобы записаться на просмотр квартиры. Мы свяжемся с Вами в ближайшее время.</p>
-									<form>
+									<form method="get">
 										<div class="tel_wrapp">
 											<div class="input_title">
 												<div class="col">
@@ -588,7 +607,6 @@
 													<p>Ваш номер телефона</p>
 												</div>
 											</div>
-
 											<div class="tel_inputs" id="focus">
 												<div class="inline_block black">+7 ( </div>
 												<div class="inline_block orange">
@@ -605,24 +623,29 @@
 												<p>Проверьте правильность введенного номера и отправьте повторно.</p>
 											</div> -->
 										</div>
-										<div class="message_wrapp">
-											<div class="input_title">
-												<div class="col">
-													<i class="pensil"></i>
-												</div>
-												<div class="col">
-													<p>Сообщение</p>
+										<div class="form_field_wrapp">
+											<div class="message_wrapp">
+												<div class="input_title">
+													<div class="col">
+														<i class="pensil"></i>
+													</div>
+													<div class="col">
+														<p>Сообщение</p>
+													</div>
 												</div>
 											</div>
-										</div>
-										<div class="input_wrapp">
-											<textarea></textarea>
-										</div>
-										<div class="submit_btn">
-											<input type="submit" name="" value="Отправить" />
-											<div class="arrow_circle">
-												<i class="arrow_down"></i>
+											<div class="input_wrapp">
+												<textarea></textarea>
 											</div>
+										</div>
+										<div class="submit_btn_wrapp">
+											<input class="submit_input" type="submit" name="" value="Отправить" />
+											<button type="button" class="submit_btn">
+												Отправить
+												<div class="arrow_circle">
+													<i class="arrow_down"></i>
+												</div>
+											</button>
 										</div>
 									</form>
 								</div>
@@ -633,7 +656,8 @@
 				<!-- /Section 5 - Main Page -->
 
 				<!-- Section 6 - Main Page -->
-				<!-- <section class="section">
+
+				<section class="section sect_6">
 					<div class="row">
 						<div class="h2_wrapp_3">
 							<h2>Этапы работы с нами</h2>
@@ -641,90 +665,121 @@
 						<div class="steps_thumbnails">
 							<div class="step">
 								<div class="num_circle">
-									<p>01</p>
+									<div class="num">01</div>
 								</div>
-								<p>Выбор квартиры</p>
+								<p>Выбор<br /> квартиры</p>
 							</div>
 							<div class="step">
 								<div class="num_circle">
-									<p>02</p>
+									<div class="num">02</div>
 								</div>
-								<p>Заключение договора</p>
+								<p>Заключение<br /> договора</p>
 							</div>
 							<div class="step">
 								<div class="num_circle">
-									<p>03</p>
+									<div class="num">03</div>
 								</div>
-								<p>Регистрация договора и оплата</p>
+								<p>Регистрация<br /> договора и оплата</p>
 							</div>
 							<div class="step">
 								<div class="num_circle">
-									<p>04</p>
+									<div class="num">04</div>
 								</div>
-								<p>Получение ключей, заселение</p>
+								<p>Получение ключей,<br /> заселение</p>
 							</div>
 						</div>
 						<div class="about_us_templ">
 							<article>
-								<div class="h2_wrapp_4">
+								<div class="h2_wrapp_3">
 									<h2>О нас</h2>
 								</div>
-								<div class="article_desc">
-									<div class="row clearfix">
-										<div class="left">
-											<p>В наших рядах работают высококвалифицированные сотрудники, обладающие большим опытом работы в области строительства, экономики и недвижимости.</p>
+								<div class="articles_slider_wrapp">
+									<div class="articles_slider">
+										<div class="slide">
+											<div class="article_thumb">
+												<p>В наших рядах работают высококвалифицированные сотрудники, обладающие большим опытом работы в области строительства, экономики и недвижимости.</p>
+											</div>
 										</div>
-										<div class="right">
-											<p>Квартиры-студии – это квартиры нового поколения. Этот вид жилья в основном предназначен для людей, которые выбрали эффективность и практичность, а не погоню за квадратными метрами.</p>
+										<div class="slide">
+											<div class="article_thumb">
+												<p>Квартиры-студии – это квартиры нового поколения. Этот вид жилья в основном предназначен для людей, которые выбрали эффективность и практичность, а не погоню за квадратными метрами.</p>
+											</div>
+										</div>
+										<div class="slide">
+											<div class="article_thumb">
+												<p>В наших рядах работают высококвалифицированные сотрудники, обладающие большим опытом работы в области строительства, экономики и недвижимости.</p>
+											</div>
+										</div>
+										<div class="slide">
+											<div class="article_thumb">
+												<p>Квартиры-студии – это квартиры нового поколения. Этот вид жилья в основном предназначен для людей, которые выбрали эффективность и практичность, а не погоню за квадратными метрами.</p>
+											</div>
 										</div>
 									</div>
-								</div>
-								<div class="right_desc">
-									<div class="col"><h4>My space</h4></div>
-									<div class="col"><p>пространство для жизни</p></div>
+									<div class="right_desc">
+										<div class="col"><h4>My space</h4></div>
+										<div class="col"><p>пространство для жизни</p></div>
+									</div>
 								</div>
 							</article>
-						</div>
-						<ul class="soc_list">
-							<li><a href="#"><img src="img/" alt="" /></a></li>
-							<li><a href="#"><img src="img/" alt="" /></a></li>
-							<li><a href="#"><img src="img/" alt="" /></a></li>
-							<li><a href="#"><img src="img/" alt="" /></a></li>
-						</ul>
+						</div>						
 					</div>
-				</section> -->
+					<div class="sect_footer">
+						<div class="row clearfix">
+							<div class="left">
+								<ul class="soc_list">
+									<li><a href="#"><i class="vk"></i></a></li>
+									<li><a href="#"><i class="fb"></i></a></li>
+									<li><a href="#"><i class="youtube"></i></a></li>
+									<li><a href="#"><i class="inst"></i></a></li>
+								</ul>
+							</div>
+							<div class="right">
+								<div class="btn_wrapp">
+									<button type="button" class="yellow_cr_btn_2" id="articles_slider_btn"></button>
+								</div>
+							</div>
+						</div>						
+					</div>
+				</section>
+
 				<!-- /Section 6 - Main Page -->
 
-				<!-- Section 7 - Main Page -->
-				<section class="section">
-					<div class="map_box">
-						<div id="map"></div>
+				<!-- Section 7 - Main Page -->				
+				<section class="section map_section">
+					<div class="map_wrapp_2">
+						<div id="map2"></div>
 					</div>
 					<div class="contacts_sect">
 						<div class="row clearfix">
-							<div class="left">
-								<h3>Остались вопросы?</h3>
-								<p>Звоните или <a href="#" class="link_3">напишите нам</a></p>
-								<div class="contacts_thumb">
-									<div class="col">
-										<div class="yellow_circle"><i class="tel_2"></i></div>
-									</div>
-									<div class="col">
-										<p><a href="tel:+74991500111" class="tel_link">+7 499 150 01 11</a></p>
-										<p>Работаем ежедневно с <b>10.00</b> до <b>20.00</b><br />
-											<b>Воскресенье - выходной</b></p>
-									</div>
-								</div>
-							</div>
 							<div class="right">
-								<div class="contact_box">
-									<h4>Наш адрес:</h4>
-									<p>г. Москва, м. Курская, Гороховский пер. 14 стр. 2</p>
-									<div class="link_wrapp">
-										<a href="#" class="link_4">Как нас найти?</a>
+								<div class="contact_box_wrapp">
+									<div class="contact_box">
+										<div class="inner">
+											<h4>Наш адрес:</h4>
+											<p>г. Москва, м. Курская, Гороховский пер. 14 стр. 2</p>
+											<div class="link_wrapp">
+												<a href="#" class="link_4">Как нас найти?</a>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
+							<div class="left">
+								<div class="contact_descript">
+									<h2>Остались<br /> вопросы?</h2>
+									<p>Звоните или <a href="#" class="yellow_2">напишите нам</a></p>
+									<div class="contacts_thumb">
+										<div class="col">
+											<div class="yellow_circle"><i class="tel_2"></i></div>
+										</div>
+										<div class="col">
+											<p><a href="tel:+74991500111" class="tel_link_3">+7 499 150 01 11</a></p>
+											<p>Работаем ежедневно с <span class="normal_w">10.00</span> до <span class="normal_w">20.00</span><br /><span class="normal_w">Воскресенье - выходной</span></p>
+										</div>
+									</div>
+								</div>
+							</div>							
 						</div>
 					</div>
 				</section>
@@ -741,28 +796,31 @@
 			<div class="footer row clearfix">
 				<div class="left">
 					<a href="#" class="logo">
-						<h2><span class="ms">MS</span><br /><span class="yellow">development</span></h2>
-						<p>пространство для жизни</p>
+						<h2><span class="ms">MS</span><span class="yellow">development</span></h2>
+						<p>пространство<br /> для жизни</p>
 					</a>
 				</div>
 				<div class="left">
-					<div class="contacts2_templ">
-						<div class="col">
+					<div class="contacts2_templ offset_ziro">
+						<div class="contacts2_templ_col">
 							<ul class="bold_list">
 								<li>ООО “ООО”</li>
-								<li>ИНН: 457856322384</li>
-								<li>ОГРН: 26741212544454787</li>
+								<li>ИНН: <span>457856322384</span></li>
+								<li>ОГРН: <span>26741212544454787</span></li>
 							</ul>
 						</div>
-						<div class="col">
-							<div class="contacts_thumb_2">
-								<div class="col">
-									<div class="yellow_circle"><i class="tel_2"></i></div>
+						<div class="contacts2_templ_col">
+							<div class="contacts_thumb_3">
+								<div class="input_title input_title_2">
+									<div class="col">
+										<i class="tel_black"></i>
+									</div>
+									<div class="col">
+										<a href="tel:+74991500111" class="tel_link tel_link_2">+7 499 150 01 11</a>
+									</div>
 								</div>
-								<div class="col">
-									<p><a href="tel:+74991500111" class="tel_link">+7 499 150 01 11</a></p>
-									<p>Работаем ежедневно с <b>10.00</b> до <b>20.00</b><br />
-										<b>Воскресенье - выходной</b></p>
+								<div class="inner">
+									<p>Работаем ежедневно с <b>10.00</b> до <b>20.00</b><br /> <b>Воскресенье - выходной</b></p>
 								</div>
 							</div>
 						</div>
@@ -784,6 +842,7 @@
 	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.fancybox.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/fullpage.css">
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">
+	<script src="https://api-maps.yandex.ru/2.0-stable/?apikey=<ваш API-ключ>&?apikey=<ваш API-ключ>&load=package.standard&lang=ru-RU" type="text/javascript"></script>
 	<!-- <script src="vendors/js/jquery.js"></script> -->
 	<script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
 	<script src="slick/slick.js"></script>
@@ -792,8 +851,9 @@
 	<script src="vendors/js/jquery.fancybox.js"></script>
 	<script src="vendors/js/sly.js"></script>
 	<!-- <script src="vendors/js/fullpage.js"></script> -->
-	<script src="vendors/js/scrolloverflow.min.js"></script>
+	<!-- <script src="vendors/js/scrolloverflow.min.js"></script> -->
 	<script src="js/scripts.js"></script>
+	<script src="js/map.js"></script>
 
 </body>
 </html>
